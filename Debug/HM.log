@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\Мосеенков\source\repos\HM\Source.cpp(48,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Мосеенков\source\repos\HM\Source.cpp(219): warning C4715: Third: значение возвращается не при всех путях выполнения
+  HM.vcxproj -> C:\Users\Мосеенков\source\repos\HM\Debug\HM.exe

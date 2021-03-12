@@ -1,0 +1,8 @@
+C:\Users\79621\Desktop\HM\Debug\HM.exe
+C:\Users\79621\Desktop\HM\Debug\HM.pdb
+C:\Users\Дмитрий\Downloads\HM\HM\Debug\HM.exe
+C:\Users\Дмитрий\Downloads\HM\HM\Debug\HM.pdb
+C:\Users\GAME\Desktop\УНИВЕР\ХЕЛЬМЕСЕВО\HM\Debug\HM.exe
+C:\Users\GAME\Desktop\УНИВЕР\ХЕЛЬМЕСЕВО\HM\Debug\HM.pdb
+C:\Users\Мосеенков\source\repos\HM\Debug\HM.exe
+C:\Users\Мосеенков\source\repos\HM\Debug\HM.pdb
