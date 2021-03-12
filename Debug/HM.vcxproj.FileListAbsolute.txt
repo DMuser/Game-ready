@@ -6,3 +6,5 @@ C:\Users\GAME\Desktop\УНИВЕР\ХЕЛЬМЕСЕВО\HM\Debug\HM.exe
 C:\Users\GAME\Desktop\УНИВЕР\ХЕЛЬМЕСЕВО\HM\Debug\HM.pdb
 C:\Users\Мосеенков\source\repos\HM\Debug\HM.exe
 C:\Users\Мосеенков\source\repos\HM\Debug\HM.pdb
+D:\Новая папка (2)\HM (2)\HM\Debug\HM.exe
+D:\Новая папка (2)\HM (2)\HM\Debug\HM.pdb

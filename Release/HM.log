@@ -1,8 +1,9 @@
-﻿  Source.cpp
-D:\HM (2)\HM\Source.cpp(48,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+﻿  saves.cpp
+  Source.cpp
+D:\Новая папка (2)\HM (2)\HM\Source.cpp(48,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   Создание кода
-  7 of 37 functions (18.9%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    8 functions had inline decision re-evaluated but remain unchanged
+  Previous IPDB not found, fall back to full compilation.
+D:\Новая папка (2)\HM (2)\HM\Source.cpp(219): warning C4715: Third: значение возвращается не при всех путях выполнения
+  All 37 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Создание кода завершено
-  HM.vcxproj -> D:\HM (2)\HM\Release\HM.exe
+  HM.vcxproj -> D:\Новая папка (2)\HM (2)\HM\Release\HM.exe

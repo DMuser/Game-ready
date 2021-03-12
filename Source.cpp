@@ -258,14 +258,22 @@ void Fifth(int Beda_Bashka, int medal, int fireresist, int Bible, int choose, in
 		{
 		case 1:
 			chapter++;
-			Beda_Bashka = Beda_Bashka + 1;
-			printf_s("Ваше безумие % d", Beda_Bashka);
+			if (Beda_Bashka > 1)
+			{
+				SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | Albert));
+				printf(" хАХАХАХХАХАххахаахмхам-говорит Альберт- Я кажись Чайник.\n");
+				Menu(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
+			}
 			Six(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
 			break;
 		case 2:
 			chapter += 2;
-			Beda_Bashka = Beda_Bashka + 1;
-			printf_s("Ваше безумие % d", Beda_Bashka);
+			if (Beda_Bashka > 1)
+			{
+				SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | Albert));
+				printf(" хАХАХАХХАХАххахаахмхам-говорит Альберт- Я кажись Чайник.\n");
+				Menu(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
+			}
 			Seven(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
 			break;
 		default:printf("No correct ");
@@ -290,21 +298,17 @@ void Six(int Beda_Bashka, int medal, int fireresist, int Bible, int choose, int 
 			if (medal == 1) printf(" Вы ставите медаль\n");
 			else
 			{
-				printf(" вы не можете поставить медаль ввиду ее отсутствия\n");
+				printf(" вы не моежете поставить медаль ввиду ее отсутствия\n");
 				break;
 			}
 			SetConsoleTextAttribute(hConsole, (WORD)((7 << 4) | Console));
 			printf_s("Альберт почти теряет сознание от дозы алкоголя, но подошедший сзади итальянец,\nвидя почетный знак распивает с Альбретом большую часть водки, позволяя вам выжить\nБорис даёт ему какую - то безделушку и падает на стол, начиная мирно храпеть.");
 			chapter++;
-			Beda_Bashka = Beda_Bashka + 1;
-			printf_s("Ваше безумие % d", Beda_Bashka);
 			Seven(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
 		}
 		break;
 		case 2:
 			chapter++;
-			Beda_Bashka = Beda_Bashka + 1;
-			printf_s("Ваше безумие % d", Beda_Bashka);
 			Seven(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
 			break;
 		default:printf("No correct ");
@@ -319,18 +323,14 @@ void Seven(int Beda_Bashka, int medal, int fireresist, int Bible, int choose, in
 	{
 		callsave(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
 		SetConsoleTextAttribute(hConsole, (WORD)((7 << 4) | Albert));
-		printf_s("Догнав художника вы находите его в большой палатке , за столом.\n- А давай сыграем в кости? Если победишь, скажу где выход!\n1) - Сыграть\n2) - Ты же уже говорил где выход. Не будет ли второй таким же ?");
+		printf_s("Вы стали адекватным.Догнав художника вы находите его в большой палатке , за столом.\n- А давай сыграем в кости? Если победишь, скажу где выход!\n1) - Сыграть\n2) - Ты же уже говорил где выход. Не будет ли второй таким же ?");
 		scanf_s("%d", &choose);
 		switch (choose)
 		{
 		case 1:
-			Beda_Bashka = Beda_Bashka + 1;
-			printf_s("Ваше безумие % d", Beda_Bashka);
 			Game(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
 			break;
 		case 2:
-			Beda_Bashka = Beda_Bashka + 1;
-			printf_s("Ваше безумие % d", Beda_Bashka);
 			SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | Yeltsin));
 			printf_s("Неее, не будет. Давай не бойся.");
 			Game(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
@@ -376,7 +376,7 @@ void Game(int Beda_Bashka, int medal, int fireresist, int Bible, int choose, int
 				krek = 0;
 				printf(" Поражение\n");
 				Beda_Bashka = Beda_Bashka + 1;
-				printf_s("Ваше безумие % d", Beda_Bashka);
+				printf(" Ваш уровень безумия %d", Beda_Bashka);
 				chapter++;
 				Eight(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
 			}
@@ -401,6 +401,12 @@ void Eight(int Beda_Bashka, int medal, int fireresist, int Bible, int choose, in
 		{
 			if (medal == 1)
 			{
+				if (Beda_Bashka > 1)
+				{
+					SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | Albert));
+					printf(" хАХАХАХХАХАххахаахмхам-говорит Альберт- Я кажись Чайник.\n");
+					Menu(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
+				}
 				SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | Author));
 				printf(" Вы показываете медаль\n");
 				SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | Yeltsin));
@@ -413,6 +419,8 @@ void Eight(int Beda_Bashka, int medal, int fireresist, int Bible, int choose, in
 			{
 				SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | Author));
 				printf(" Вы не моежете показать медаль\n");
+				Beda_Bashka = Beda_Bashka + 1;
+				printf(" Ваш уровень безумия %d", Beda_Bashka);
 				Eight(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
 			}
 
@@ -421,6 +429,12 @@ void Eight(int Beda_Bashka, int medal, int fireresist, int Bible, int choose, in
 		break;
 		case 2:
 		{
+			if (Beda_Bashka > 1)
+			{
+				SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | Albert));
+				printf(" хАХАХАХХАХАххахаахмхам-говорит Альберт- Я кажись Чайник.\n");
+				Menu(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
+			}
 			SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | Yeltsin));
 			printf_s("- Спасибо тебе! Бери вот этот крюк, он тебе пригодится.\nА я пойду их дьявола подавлю, совсем тут распоясались без коммунизма .");
 			Ningt(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
@@ -441,7 +455,7 @@ void Ningt(int Beda_Bashka, int medal, int fireresist, int Bible, int choose, in
 		callsave(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
 		SetConsoleTextAttribute(hConsole, (WORD)((7 << 4) | Console));
 		printf_s("\n1) -  Пойти к печке.\n2) -  Двигаться за ним, посмотреть что будет.\n");
-		if (Beda_Bashka > 3)
+		if (Beda_Bashka > 1)
 		{
 			SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | Albert));
 			printf(" хАХАХАХХАХАххахаахмхам-говорит Альберт- Я кажись Чайник.\n");
@@ -453,15 +467,10 @@ void Ningt(int Beda_Bashka, int medal, int fireresist, int Bible, int choose, in
 		case 1:
 			SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | Author));
 			printf_s("Используя все нажитые предметы вы лезете по трубе вверх, к далёкому свету.\nВы видите вспышку, теряете сознание и просыпаетесь от пинков бабки в маршрутке.\n- Конечная , вставай, олух.");
-			printf_s("Ваше безумие % d", Beda_Bashka);
-			Beda_Bashka = Beda_Bashka + 1;
-			printf_s("Ваше безумие % d", Beda_Bashka);
 			Menu(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
 			break;
 		case 2:
 			chapter++;
-			Beda_Bashka = Beda_Bashka + 1;
-			printf_s("Ваше безумие % d", Beda_Bashka);
 			Ten(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
 			break;
 		default:printf("No correct ");
@@ -476,12 +485,6 @@ void Ten(int Beda_Bashka, int medal, int fireresist, int Bible, int choose, int 
 	{
 		callsave(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
 		SetConsoleTextAttribute(hConsole, (WORD)((7 << 4) | Console));
-		if (Beda_Bashka > 3)
-		{
-			SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | Albert));
-			printf(" хАХАХАХХАХАххахаахмхам-говорит Альберт- Я кажись Чайник.\n");
-			Menu(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
-		}
 		TEXTDARWIN();
 		scanf_s("%d", &choose);
 		switch (choose)
@@ -489,22 +492,17 @@ void Ten(int Beda_Bashka, int medal, int fireresist, int Bible, int choose, int 
 		case 1:
 			chapter++;
 			Beda_Bashka = Beda_Bashka + 1;
-			printf_s("Ваше безумие % d", Beda_Bashka);
 			Eleven(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
 			break;
 		case 2:
 			Beda_Bashka = Beda_Bashka + 1;
 			chapter++;
-			Beda_Bashka = Beda_Bashka + 1;
-			printf_s("Ваше безумие % d", Beda_Bashka);
 			Eleven(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
 			break;
 		case 3:
 			SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | Win));
 			printf_s("Поздравляю!- учёный, обрадованный, что чертенок, икая, закивал протягивает Альберту книгу - вот возьми, это Библия.Может пригодится.");
 			chapter++;
-			Beda_Bashka = Beda_Bashka + 1;
-			printf_s("Ваше безумие % d", Beda_Bashka);
 			Eleven(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
 			Bible = Bible + 1;
 			break;
@@ -515,8 +513,6 @@ void Ten(int Beda_Bashka, int medal, int fireresist, int Bible, int choose, int 
 
 void Eleven(int Beda_Bashka, int medal, int fireresist, int Bible, int choose, int krek, int& chapter)
 {
-	printf_s("Ваше безумие % d", Beda_Bashka);
-	
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	if (chapter == 11)
 	{
@@ -534,36 +530,23 @@ void Eleven(int Beda_Bashka, int medal, int fireresist, int Bible, int choose, i
 		switch (choose)
 		{
 		case 1:
-			
 			SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | Win));
 			printf_s("Вы видите вспышку, теряете сознание и просыпаетесь от пинков бабки в маршрутке.\n- Конечная , вставай, олух.\n");
-			printf_s("Ваше безумие % d", Beda_Bashka);
-			Beda_Bashka = Beda_Bashka + 1;
-			printf_s("Ваше безумие % d", Beda_Bashka);
 			Menu(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
 			printf("\n");
 			break;
 		case 2:
 		{
-			
 			SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | Win));
 			printf_s("Вы видите вспышку, теряете сознание и просыпаетесь от пинков бабки в маршрутке.\n- Конечная , вставай, олух.\n");
-			printf_s("Ваше безумие % d", Beda_Bashka);
-			Beda_Bashka = Beda_Bashka + 1;
-			printf_s("Ваше безумие % d", Beda_Bashka);
 			Menu(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
 			printf("\n");
 		}
 		break;
 		case 3:
-			
-			
 			SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | Author));
 			printf_s("Вы подбегаете к дьяволу и хватаете его за руку . Ленин наконец-то догоняет того и придавливает ему ноги.\n- Ну что скотина ! Думал ты один такой умный ! Быстро меня на землю вернул , гад. А то я тебе все твое царство на колени поставлю я как империю Российскую.\n- Ладно ладно.\n- И моего товарища не забудь .\n");
-			printf_s("Альберт видит вспышку и просыпаетсяна броневике.\n- Товарищ! -Окликает Альберта Ленин.-Вставай в ряд нашей красной армии! Я смотрю много белых развелось. Пора им показать!\n");
-			printf_s("Ваше безумие % d", Beda_Bashka );
-			Beda_Bashka = Beda_Bashka + 1;
-			printf_s("Ваше безумие % d", Beda_Bashka);
+			printf_s("Альберт видит вспышку и просыпаетсяна броневике.\n- Товарищ! -Окликает Альберта Ленин.-Вставай в ряд нашей красной армии! Я смотрю много белых развелось. Пора им показать!");
 			Menu(Beda_Bashka, medal, fireresist, Bible, choose, krek, chapter);
 			printf("\n");
 			break;
